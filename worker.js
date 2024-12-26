@@ -59,7 +59,7 @@ async function handleRequest(request) {
   console.log(request.headers.get('host'))
 
   const path = url.pathname;
-  if (path.includes('/wp-includes/') || path.includes('/wp-content/') || path.includes('/wp-admin/')) {
+  if (path.includes('/wp-includes/') || path.includes('/wp-content/') || path.includes('/wp-admin/')|| path.includes('/test/')) {
       return new Response('Forbidden', { status: 404 });
   }  
 
